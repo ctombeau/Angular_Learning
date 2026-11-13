@@ -2,10 +2,13 @@ import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { decrement, increment, reset } from '../ngrx/counter.actions';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-my-counter',
   templateUrl: './my-counter.component.html',
+  standalone:true,
+  imports:[CommonModule]
 })
 export class MyCounterComponent {
   count$!: Observable<number>
